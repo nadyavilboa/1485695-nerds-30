@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
     <head>
         <meta charset="utf-8">
         <title>Html Academy: Нёрдс</title>
@@ -7,30 +7,38 @@
         <link rel="icon" href="img/Vector.svg" type="image/svg+×ml"/>
         <link rel="apple-touch-icon" href="img/152.png"/>
         <link rel="manifest" href="manifest.webmanifest"/>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <header>
-            <a href="index.html">
-                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"/>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="blank.html">Студия</a></li>
-                    <li><a href="blank.html">Клиенты</a></li>
-                    <li><a href="catalog.html">Магазин</a></li>
-                    <li><a href="blank.html">Контакты</a></li>
-                </ul>
-            </nav>
-            <a href="blank.html">Корзина</a>
+    <body class="page-body">
+        <header class="main-header">
+          <a class="main-header-logo" href="index.html">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"/>
+          </a>
+          <nav class="main-navigation">
+              <ul class="site-navigation">
+                  <li><a href="blank.html">Студия</a></li>
+                  <li><a href="blank.html">Клиенты</a></li>
+                  <li><a href="catalog.html">Магазин</a></li>
+                  <li><a href="blank.html">Контакты</a></li>
+              </ul>
+          </nav>
+          <a class="basket" href="blank.html">Корзина</a>
         </header>
-        <main>
-            <h1>Магазин готовых шаблонов</h1>
-            <section>
-                <h2>Фильтр товаров</h2>
+        <main class="center">
+            <h1 class="page-title">Магазин готовых шаблонов</h1>
+            <section class="filter">
+                <h2 class="section-title">Фильтр товаров</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
                     <fieldset>
                         <legend>Стоимость:</legend>
-                       от 0<input type="range" name="cost" id="cost" step="100" min="0" max="15000"/>до 15000
+                        <span>от
+                          <span class="price">0</span>
+                        </span>
+                        <input type="range" name="cost" id="cost" step="100" min="0" max="15000"/>
+                        <span>до
+                          <span class="price">15 000</span>
+                        </span>
                     </fieldset>
                     <fieldset>
                         <legend>Сетка:</legend>
@@ -74,54 +82,96 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <button type="submit">Показать</button>
+                    <button class="button-filter-selection" type="submit">Показать</button>
                 </form>
             </section>
-            <section>
-                <h2>Сортировать:</h2>
-                <ul>
-                    <li>По цене</li>
-                    <li>По типу</li>
-                    <li>По названию</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Результат фильтрации</h2>
+            <section class="sort-selection">
+                <h2 class="section-title">Сортировать:</h2>
                 <ul>
                     <li>
-                        <a href="#">
+                      <button class="button sort-current">По цене</button>
+                    </li>
+                    <li>
+                      <button class="button sort">По типу</button>
+                    </li>
+                    <li>
+                      <button class="button sort">По названию</button>
+                    </li>
+                </ul>
+            </section>
+            <section class="filter-result">
+                <h2 class="section-title">Результат фильтрации</h2>
+                <ul>
+                    <li>
+                        <a class="img-template" href="#">
                             <img src="img/img-sedona1.jpg" width="359" height="578" alt="Sedona"/>
                         </a>
+                        <section class="modal-template">
+                          <h2>Купить Sedona</h2>
+                          <a class="buy-template" href="#">Sedona</a>
+                          <p>Информационный сайт<br/>для туристов</p>
+                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        </section>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="img-template" href="#">
                             <img src="img/img-pink1.jpg" width="358" height="578" alt="Pink"/>
                         </a>
+                        <section class="modal-template">
+                          <h2>Купить Pink</h2>
+                          <a class="buy-template" href="#">Pink app</a>
+                          <p>Продуктовый лендинг<br/>приложения для iOS и Android</p>
+                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        </section>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="img-template" href="#">
                             <img src="img/img-barbershop1.jpg" width="358" height="578" alt="Borodinsky"/>
                         </a>
+                        <section class="modal-template">
+                          <h2>Купить Barbershop</h2>
+                          <a class="buy-template" href="#">Barbershop</a>
+                          <p>Сайт салона красоты.<br/>Для мужчин, да.</p>
+                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        </section>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="img-template" href="#">
                             <img src="img/img-mishka1.jpg" width="358" height="578" alt="Mishka"/>
                         </a>
+                        <section class="modal-template">
+                          <h2>Купить Mishka</h2>
+                          <a class="buy-template" href="#">Mishka</a>
+                          <p>Интернет-магазин<br/>вязанных игрушек.</p>
+                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        </section>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="img-template" href="#">
                             <img src="img/img-aplus1.jpg" width="359" height="578" alt="Aplus"/>
                         </a>
+                        <section class="modal-template">
+                          <h2>Купить A Plus</h2>
+                          <a class="buy-template" href="#">A Plus</a>
+                          <p>Лендинг курсов повышения<br/>квалификации</p>
+                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        </section>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="img-template" href="#">
                             <img src="img/img-kvast1.jpg" width="359" height="578" alt="Кваст"/>
                         </a>
+                        <section class="modal-template">
+                          <h2>Купить Кваст</h2>
+                          <a class="buy-template" href="#">Кваст</a>
+                          <p>Промо-сайт производителя<br/>крафтового кваса</p>
+                          <a class="button standart" href="#">9 900 &#8381</a>
+                        </section>
                     </li>
                 </ul>
             </section>
-            <section>
-                <h2>Кнопки перехода</h2>
+            <section class="button-filter-selection">
+                <h2 class="section-title">Кнопки перехода</h2>
                 <ul>
                     <li>
                         <a href="#">1</a>
@@ -138,34 +188,58 @@
                 </ul>
             </section>
         </main>
-    <section>
-        <h2>Карта</h2>
-        <img src="img/map1.png" widht="1440" height="416" alt="Офис компании на карте"/>
-    </section>
-    <section>
-        <h3>Nёrds Design Studio</h3>
-        <p>191186, Санкт-Петербург<br/>
-        ул. Б. Конюшенная, д. 19/8</p>
-        <p>
-            <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-        </p>
-        <a href="blank.html">Напишите нам</a>
-    </section>
-    <footer>
-        <h2>Контакты</h2>
-        <ul>
-            <li>
-                <a href="#"><img src="img/vk-icon.svg" width="21" height="15" alt="ссылка на vkontakte"/></a>
-            </li>
-            <li>
-                <a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="ссылка на facebook"/></a>
-            </li>
-            <li>
-                <a href="#"><img src="img/Shape.svg" width="21" height="21" alt="ссылка на instagram"/></a>
-            </li>
+        <section class="map">
+          <h2 class="section-title">Карта</h2>
+          <img src="img/map1.png" widht="1440" height="416" alt="Офис компании на карте"/>
+        </section>
+        <section class="contacts">
+          <h2 class="section-title">Nёrds Design Studio</h2>
+          <p class="contacts-address">191186, Санкт-Петербург<br/>
+          ул. Б. Конюшенная, д. 19/8</p>
+          <p>
+            <a class="contacts-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          </p>
+          <a class="button standart" href="blank.html">Напишите нам</a>
+        </section>
+        <section class="modal-form">
+          <h2 class="section-title">Форма для связи</h2>
+            <p class="form-head">Напишите нам</p>
+            <button class="button-close">
+              <!--Здесь будет кнопка закрыть!-->
+            </button>
+            <form class="letter-form" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
+              <p class="letter-item">
+                <label for="your-name">Ваше имя:</label>
+                <input id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
+              </p>
+              <p class="letter-item">
+                <label for="your-address">Ваш email:</label>
+                <input id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
+              </p>
+              <p class="letter-item">
+                <label for="letter">Текст письма:</label>
+                <textarea form="your-letter" name="letter" placeholder="В свободной форме"></textarea>
+              </p>
+              <button class="button standart" type="submit">Отправить</button>
+            </form>
+          </fieldset>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <h2 class="section-title">Социальные сети</h2>
+        <ul class="social-list">
+          <li>
+            <a class="social-button" href="#"><img src="img/vk-icon.svg" width="21" height="15" alt="ссылка на vkontakte"/></a>
+          </li>
+          <li>
+            <a class="social-button" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="ссылка на facebook"/></a>
+          </li>
+          <li>
+            <a class="social-button" href="#"><img src="img/Shape.svg" width="21" height="21" alt="ссылка на instagram"/></a>
+          </li>
         </ul>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-        </footer>
+        <p class="text-invitation">Давайте дружить, это выгодно!</p>
+        <p class="text-motivation">Скидка 10% для друзей из социальных сетей.</p>
+      </footer>
     </body>
 </html>
