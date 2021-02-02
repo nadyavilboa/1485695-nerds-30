@@ -10,13 +10,13 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="page-body">
-        <header class="main-header">
-          <a class="main-header-logo" href="index.html">
+    <body class="page__body">
+        <header class="main__header">
+          <a class="main__header__logo" href="index.html">
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"/>
           </a>
-          <nav class="main-navigation">
-              <ul class="site-navigation">
+          <nav class="main__navigation">
+              <ul class="site__navigation">
                   <li><a href="blank.html">Студия</a></li>
                   <li><a href="blank.html">Клиенты</a></li>
                   <li><a href="catalog.html">Магазин</a></li>
@@ -26,18 +26,18 @@
           <a class="basket" href="blank.html">Корзина</a>
         </header>
         <main class="center">
-            <h1 class="page-title">Магазин готовых шаблонов</h1>
+            <h1 class="page__title">Магазин готовых шаблонов</h1>
             <section class="filter">
-                <h2 class="section-title">Фильтр товаров</h2>
+                <h2 class="filter__title hidden">Фильтр товаров</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
                     <fieldset>
                         <legend>Стоимость:</legend>
                         <span>от
-                          <span class="price">0</span>
+                          <span class="filter__price">0</span>
                         </span>
                         <input type="range" name="cost" id="cost" step="100" min="0" max="15000"/>
                         <span>до
-                          <span class="price">15 000</span>
+                          <span class="filter__price">15 000</span>
                         </span>
                     </fieldset>
                     <fieldset>
@@ -82,164 +82,163 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <button class="button-filter-selection" type="submit">Показать</button>
+                    <button class="button--filter" type="submit">Показать</button>
                 </form>
             </section>
-            <section class="sort-selection">
-                <h2 class="section-title">Сортировать:</h2>
+            <section class="sort__selection">
+                <h2 class="sort__selection__title">Сортировать:</h2>
                 <ul>
                     <li>
-                      <button class="button sort-current">По цене</button>
+                      <button class="button--sort--current">По цене</button>
                     </li>
                     <li>
-                      <button class="button sort">По типу</button>
+                      <button class="button--sort">По типу</button>
                     </li>
                     <li>
-                      <button class="button sort">По названию</button>
+                      <button class="button--sort">По названию</button>
                     </li>
                 </ul>
             </section>
-            <section class="filter-result">
-                <h2 class="section-title">Результат фильтрации</h2>
-                <ul>
+            <section class="filter__result">
+                <h2 class="filter__result__title hidden">Результат фильтрации</h2>
+                <ul class="list__template">
                     <li>
-                        <a class="img-template" href="#">
+                        <a class="template__img" href="#">
                             <img src="img/img-sedona1.jpg" width="359" height="578" alt="Sedona"/>
                         </a>
-                        <section class="modal-template">
-                          <h2>Купить Sedona</h2>
-                          <a class="buy-template" href="#">Sedona</a>
-                          <p>Информационный сайт<br/>для туристов</p>
-                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        <section class="template__modal">
+                          <h3 class="modal__title hidden">Купить Sedona</h3>
+                          <a class="modal__buy" href="#">Sedona</a>
+                          <p class="modal__text">Информационный сайт<br/>для туристов</p>
+                          <a class="button button--template" href="#">9 900 &#8381</a>
                         </section>
                     </li>
                     <li>
-                        <a class="img-template" href="#">
+                        <a class="template__img" href="#">
                             <img src="img/img-pink1.jpg" width="358" height="578" alt="Pink"/>
                         </a>
-                        <section class="modal-template">
-                          <h2>Купить Pink</h2>
-                          <a class="buy-template" href="#">Pink app</a>
-                          <p>Продуктовый лендинг<br/>приложения для iOS и Android</p>
-                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        <section class="template__modal">
+                          <h3 class="modal__title hidden">Купить Pink</h3>
+                          <a class="modal__buy" href="#">Pink app</a>
+                          <p class="modal__text">Продуктовый лендинг<br/>приложения для iOS и Android</p>
+                          <a class="button button--template" href="#">9 900 &#8381</a>
                         </section>
                     </li>
                     <li>
-                        <a class="img-template" href="#">
+                        <a class="template__img" href="#">
                             <img src="img/img-barbershop1.jpg" width="358" height="578" alt="Borodinsky"/>
                         </a>
-                        <section class="modal-template">
-                          <h2>Купить Barbershop</h2>
-                          <a class="buy-template" href="#">Barbershop</a>
-                          <p>Сайт салона красоты.<br/>Для мужчин, да.</p>
-                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        <section class="template__modal">
+                          <h3 class="modal__title hidden">Купить Barbershop</h3>
+                          <a class="modal__buy" href="#">Barbershop</a>
+                          <p class="modal__text">Сайт салона красоты.<br/>Для мужчин, да.</p>
+                          <a class="button button--template" href="#">9 900 &#8381</a>
                         </section>
-                    </li>
+                      </li>
                     <li>
-                        <a class="img-template" href="#">
+                        <a class="img__template" href="#">
                             <img src="img/img-mishka1.jpg" width="358" height="578" alt="Mishka"/>
                         </a>
-                        <section class="modal-template">
-                          <h2>Купить Mishka</h2>
-                          <a class="buy-template" href="#">Mishka</a>
-                          <p>Интернет-магазин<br/>вязанных игрушек.</p>
-                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        <section class="template__modal">
+                          <h3 class="modal__title hidden">Купить Mishka</h3>
+                          <a class="modal__buy" href="#">Mishka</a>
+                          <p class="modal__text">Интернет-магазин<br/>вязанных игрушек.</p>
+                          <a class="button button--template" href="#">9 900 &#8381</a>
                         </section>
                     </li>
                     <li>
-                        <a class="img-template" href="#">
+                        <a class="template__img" href="#">
                             <img src="img/img-aplus1.jpg" width="359" height="578" alt="Aplus"/>
                         </a>
-                        <section class="modal-template">
-                          <h2>Купить A Plus</h2>
-                          <a class="buy-template" href="#">A Plus</a>
-                          <p>Лендинг курсов повышения<br/>квалификации</p>
-                          <a class="button standart modal-template" href="#">9 900 &#8381</a>
+                        <section class="template__modal">
+                          <h3 class="modal__title hidden">Купить A Plus</h3>
+                          <a class="modal__buy" href="#">A Plus</a>
+                          <p class="modal__text">Лендинг курсов повышения<br/>квалификации</p>
+                          <a class="button button--number" href="#">9 900 &#8381</a>
                         </section>
                     </li>
                     <li>
-                        <a class="img-template" href="#">
+                        <a class="template__img" href="#">
                             <img src="img/img-kvast1.jpg" width="359" height="578" alt="Кваст"/>
                         </a>
-                        <section class="modal-template">
-                          <h2>Купить Кваст</h2>
-                          <a class="buy-template" href="#">Кваст</a>
-                          <p>Промо-сайт производителя<br/>крафтового кваса</p>
-                          <a class="button standart" href="#">9 900 &#8381</a>
+                        <section class="template__modal">
+                          <h3 class="modal__title hidden">Купить Кваст</h3>
+                          <a class="modal__buy" href="#">Кваст</a>
+                          <p class="modal__text">Промо-сайт производителя<br/>крафтового кваса</p>
+                          <a class="button button--template" href="#">9 900 &#8381</a>
                         </section>
                     </li>
                 </ul>
             </section>
-            <section class="button-filter-selection">
-                <h2 class="section-title">Кнопки перехода</h2>
-                <ul>
+            <section class="view__result">
+                <h2 class="view__result__title hidden">Кнопки перехода</h2>
+                <ul class="view__result__list">
                     <li>
-                        <a href="#">1</a>
+                        <a class="button--result--current" href="#">1</a>
                     </li>
                     <li>
-                        <a href="#">2</a>
+                        <a class="button--result" href="#">2</a>
                     </li>
                     <li>
-                        <a href="#">3</a>
+                        <a class="button--result" href="#">3</a>
                     </li>
                     <li>
-                        <a href="#">Следующая</a>
+                        <a class="button--result" href="#">Следующая</a>
                     </li>
                 </ul>
             </section>
         </main>
         <section class="map">
-          <h2 class="section-title">Карта</h2>
+          <h2 class="map__title hidden">Карта</h2>
           <img src="img/map1.png" widht="1440" height="416" alt="Офис компании на карте"/>
         </section>
         <section class="contacts">
-          <h2 class="section-title">Nёrds Design Studio</h2>
-          <p class="contacts-address">191186, Санкт-Петербург<br/>
+          <h3 class="contacts__title">Nёrds Design Studio</h3>
+          <p class="contacts__address">191186, Санкт-Петербург<br/>
           ул. Б. Конюшенная, д. 19/8</p>
           <p>
-            <a class="contacts-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+            <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
           </p>
-          <a class="button standart" href="blank.html">Напишите нам</a>
+          <a class="button button--red" href="blank.html">Напишите нам</a>
         </section>
-        <section class="modal-form">
-          <h2 class="section-title">Форма для связи</h2>
-            <p class="form-head">Напишите нам</p>
-            <button class="button-close">
+        <section class="modal--form">
+          <h2 class="form__title hidden">Форма для связи</h2>
+            <p class="form__head">Напишите нам</p>
+            <button class="button--close">
               <!--Здесь будет кнопка закрыть!-->
             </button>
-            <form class="letter-form" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
-              <p class="letter-item">
+            <form class="form__letter" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
+              <p class="letter__field">
                 <label for="your-name">Ваше имя:</label>
                 <input id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
               </p>
-              <p class="letter-item">
+              <p class="letter__field">
                 <label for="your-address">Ваш email:</label>
                 <input id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
               </p>
-              <p class="letter-item">
+              <p class="letter__field">
                 <label for="letter">Текст письма:</label>
                 <textarea form="your-letter" name="letter" placeholder="В свободной форме"></textarea>
               </p>
-              <button class="button standart" type="submit">Отправить</button>
+              <button class="button button--red" type="submit">Отправить</button>
             </form>
           </fieldset>
         </section>
       </main>
-      <footer class="main-footer">
-        <h2 class="section-title">Социальные сети</h2>
-        <ul class="social-list">
+      <footer class="main__footer">
+        <ul class="social__list">
           <li>
-            <a class="social-button" href="#"><img src="img/vk-icon.svg" width="21" height="15" alt="ссылка на vkontakte"/></a>
+            <a class="button--social" href="#"><img src="img/vk-icon.svg" width="21" height="15" alt="ссылка на vkontakte"/></a>
           </li>
           <li>
-            <a class="social-button" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="ссылка на facebook"/></a>
+            <a class="button--social" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="ссылка на facebook"/></a>
           </li>
           <li>
-            <a class="social-button" href="#"><img src="img/Shape.svg" width="21" height="21" alt="ссылка на instagram"/></a>
+            <a class="button--social" href="#"><img src="img/Shape.svg" width="21" height="21" alt="ссылка на instagram"/></a>
           </li>
         </ul>
-        <p class="text-invitation">Давайте дружить, это выгодно!</p>
-        <p class="text-motivation">Скидка 10% для друзей из социальных сетей.</p>
+        <p class="footer__invitation">Давайте дружить, это выгодно!</p>
+        <p class="footer__motivation">Скидка 10% для друзей из социальных сетей.</p>
       </footer>
     </body>
 </html>

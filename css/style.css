@@ -37,21 +37,21 @@
     --text-contacts: #666666;
 
 /* buttons */
-    --button-standart: #f8565a;
-    --button-standart-hover: #e74246;
-    --button-standart-focus: #d7373b;
-    --button-app: #00ca74;
-    --button-app-hover: #00bc6c;
-    --button-app-focus: #00aa62;
-    --button-presentation: #efc849;
-    --button-presentation-hover: #eab534;
-    --button-presentation-focus: #e5a722;
+    --button-red: #f8565a;
+    --button-red-hover: #e74246;
+    --button-red-focus: #d7373b;
+    --button-green: #00ca74;
+    --button-green-hover: #00bc6c;
+    --button-green-focus: #00aa62;
+    --button-yellow: #efc849;
+    --button-yellow-hover: #eab534;
+    --button-yellow-focus: #e5a722;
     --button-focus-text: rgba(255, 255, 255, 0.3);
     --button-close: rgba(251, 86, 90, 0.3);
     --button-slider-circle: #c1c1c1;
-    --button-filter-selection: #eeeeee;
-    --button-filter-selection-hover: #dfdfdf;
-    --button-filter-selection-focus: #d5d5d5;
+    --button-filter: #eeeeee;
+    --button-filter-hover: #dfdfdf;
+    --button-filter-focus: #d5d5d5;
 
 /* special */
     --background-svg: #a6a6a6;
@@ -60,16 +60,19 @@
     --text-placeholder: #444444;
     --shadow-img-template: rgba(0, 1, 1, 0.25);
     --shadow-modal-form: rgba(0, 0, 0, 0.4);
+    --shadow-button-filter: rgba(0, 1, 1, 0.1);
+    --border-button-result: #dbdbdb;
+    --input-hover: #b4b9bb;
 }
 
 /* Global */
 
-body {
+page__body {
   min-width: 960px;
   margin: 0px;
   padding: 0px;
   font-style: normal;
-  font-family: "Roboto", "Courier New", Courier, monospace;
+  font-family: "Roboto", "Courier New", "Arial", sans-serif;
   background-color: var(--basic-white);
 }
 
@@ -82,17 +85,21 @@ img {
   height: auto;
 }
 
+.hidden {
+  visibility: hidden; /*Все лишние подзаголовки секций спрятаны*/
+}
+
 /* Header */
 
-.main-header {
+.main__header {
   background-color: var(--special-elements);
 }
 
-.site-navigation {
+.site__navigation {
   list-style: none;
 }
 
-.site-navigation a,
+.site__navigation a,
 .basket {
   color: var(--text-big);
   font-weight: 500;
@@ -101,37 +108,44 @@ img {
   text-transform: uppercase;
 }
 
-.site-navigation a:hover,
+.site__navigation a:hover,
 .basket:hover {
-  color: var(--button-standart);
+  color: var(--button-red);
 }
 
-.site-navigation a:focus,
+.site__navigation a:focus,
 .basket:focus {
   color: var(--text-big);
   mix-blend-mode: normal;
   opacity: 0.3;
 }
 
-.slider-slogan {
+.site__navigation a:active,
+.basket:active {
+  opacity: 1;
+  border-bottom: 2px solid var(--button-red);
+}
+
+/*Анимированный слайдер*/
+
+.slider__slogan {
   color: var(--text-big);
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
 }
 
-.slider-text {
+.slider__text {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
 
-/* Buttons */
+/* all buttons */
 
 .button {
   border-radius: 3px;
-  border: none;
   color: var(--basic-white);
   text-align: center;
   font-weight: 500;
@@ -140,57 +154,79 @@ img {
   text-transform: uppercase;
 }
 
-.button.standart,
-.button.standart.modal-template {
-  background-color: var(--button-standart);
-  border: none;
+.button--red,
+.button--template {
+  background-color: var(--button-red);
 }
 
-.button.standart:hover,
-.button.standart.modal-template:hover{
-  background-color: var(--button-standart-hover);
+.button--red:hover,
+.button--template:hover {
+  background-color: var(--button-red-hover);
 }
 
-.button.standart:focus {
-  background-color: var(--button-standart-focus);
+.button--red:focus {
+  background-color: var(--button-red-focus);
   mix-blend-mode: normal;
   color: var(--button-focus-text);
 }
 
-.button.standart.modal-template:focus {
-  background-color: var(--button-standart-focus);
+.button--template:focus {
+  background-color: var(--button-red-focus);
   color: var(--basic-white);
 }
 
-.button.app {
-  background-color: var(--button-app);
+.button--green {
+  background-color: var(--button-green);
 }
 
-.button.app:hover {
-  background-color: var(--button-app-hover);
+.button--green:hover {
+  background-color: var(--button-green-hover);
 }
 
-.button.app:focus {
-  background-color: var(--button-app-focus);
+.button--green:focus {
+  background-color: var(--button-green-focus);
   mix-blend-mode: normal;
   color: var(--button-focus-text);
 }
 
-.button.presentation {
-  background-color: var(--button-presentation);
+.button--yellow {
+  background-color: var(--button-yellow);
 }
 
-.button.presentation:hover {
-  background-color: var(--button-presentation-hover);
+.button--yellow:hover {
+  background-color: var(--button-yellow-hover);
 }
 
-.button.presentation:focus {
-  background-color: var(--button-presentation-focus);
+.button--yellow:focus {
+  background-color: var(--button-yellow-focus);
   mix-blend-mode: normal;
   color: var(--button-focus-text);
 }
 
-.button.sort-current {
+.button--filter {
+  background-color: var(--button-filter);
+  border-radius: 3px;
+  color: var(--text-big);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.button--filter:hover {
+  background-color: var(--button-filter-hover);
+  color: var(--text-big);
+}
+
+.button--filter:focus {
+  background-color: var(--button-filter-focus);
+  color: var(--text-big);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
+
+.button--sort--current {
   background-color: var(--basic-white);
   color:var(--text-big);
   font-weight: normal;
@@ -199,7 +235,7 @@ img {
   text-transform: uppercase;
 }
 
-.button.sort {
+.button--sort {
   background-color: var(--basic-white);
   color:var(--text-big);
   font-weight: normal;
@@ -210,36 +246,77 @@ img {
   opacity: 0.3;
 }
 
-.button-filter-selection ul {
-  list-style: none;
+.button--sort:hover {
+  mix-blend-mode: normal;
+  opacity: 0.6;
 }
 
-.button-filter-selection a {
-  background-color: var(--button-filter-selection);
+.button--sort:focus {
+  opacity: 1;
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
+
+.button--result--current {
+  background-color: var(--basic-white);
+  color: var(--text-big);
+  border: 3px solid var(--border-button-result);
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.button--result {
+  background-color: var(--button-filter);
   color: var(--text-big);
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  border: none;
   border-radius: 3px;
 }
 
+.button--result:hover {
+  background-color: var(--button-filter-hover);
+}
+
+.button--result:focus {
+  background-color: var(--button-filter-focus);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
+
+.button--social {
+  background: linear-gradient(0deg, var(--icons-social), var(--icons-social)), var(--basic-white);
+  border-radius: 50%;
+}
+
+.button--social:hover {
+  background: linear-gradient(0deg, var(--button-red-hover), var(--button-red-hover)), var(--basic-white);
+}
+
+.button--social:focus {
+  background: linear-gradient(0deg, var(--button-red-focus), var(--button-red-focus)), var(--basic-white);
+  box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+}
 
 /* main-info */
 
-.page-title {
+.page__title {
   color: var(--text-big);
   font-weight: 500px;
   font-size: 55px;
   line-height: 55px;
 }
 
-.products-list {
+.products__list {
   list-style: none;
 }
 
-.products-item h3 {
+.products__item__title {
   color: var(--text-big);
   font-weight: bold;
   font-size: 24px;
@@ -247,22 +324,22 @@ img {
   text-transform: uppercase;
 }
 
-.products-item p,
-.description p {
+.products__item__text,
+.description__text {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
 
-.description .global-slogan {
+.description__slogan {
   color: var(--text-big);
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
 }
 
-.description .advantages {
+.description__advantages {
   color: var(--text-small);
   font-weight: bold;
   font-size: 16px;
@@ -270,15 +347,18 @@ img {
   text-transform: uppercase;
 }
 
-.advantages-list {
+.advantages__list {
+  list-style-image: url("../img/list.svg");
+}
+
+.advantages_item {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  list-style-image: url("../img/list.svg");
 }
 
-.description .quality {
+.description__quality {
   color: var(--text-big);
   font-weight: bold;
   font-size: 16px;
@@ -287,18 +367,18 @@ img {
   text-transform: uppercase;
 }
 
-.numerals {
+.quality__numerals__list {
   list-style: none;
 }
 
-.numeral-item .numeral-big {
+.numerals__item__numbers {
   color: var(--text-big);
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
 }
 
-.numeral-item .procent {
+.numbers__procent {
   color: var(--text-big);
   font-weight: bold;
   font-size: 26px;
@@ -306,7 +386,7 @@ img {
   vertical-align: text-top;
 }
 
-.numeral-item p {
+.numerals__item__head {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
@@ -318,13 +398,21 @@ img {
   border-bottom: 2px solid var(--special-elements);
 }
 
-.partners ul {
+.partners__list {
   list-style: none;
 }
 
-.filter legend,
-.sort-selection .section-title,
-.buy-template {
+.partners__list img {
+  opacity: 0.2;
+}
+
+.partners__list img:hover {
+  opacity: 1;
+}
+
+/*main-info второй страницы*/
+
+.filter legend {
   color: var(--text-big);
   font-weight: bold;
   font-size: 18px;
@@ -332,16 +420,7 @@ img {
   text-transform: uppercase;
 }
 
-.buy-template:hover {
-  color: var(--button-standart);
-}
-
-.buy-template:focus {
-  color: var(--text-big);
-  opacity: 0.3;
-}
-
-.filter .price {
+.filter__price {
   background-color: var(--special-elements);
   color: var(--text-small);
   font-weight: normal;
@@ -351,38 +430,84 @@ img {
 }
 
 .filter ul {
-  color: var(--text-small);
   list-style: none;
+}
+
+.filter input {
+  color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
+  opacity: 0.4;
 }
 
-.filter-result ul {
-  list-style: none;
+.filter input:hover {
+  opacity: 1;
 }
 
-.sort-selection ul {
-  color: var(--text-big);
-  list-style: none;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
+.filter input:focus {
   mix-blend-mode: normal;
+  opacity: 0.3;
 }
 
-/* Карта, модальные окна */
-
-.modal-template {
-  background-color: var(--special-elements);
+.sort__selection__title {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
-.img-template:hover {
+.sort__selection ul {
+  list-style: none;
+}
+
+.list__template {
+  list-style: none;
+}
+
+.list__template li:hover {
   box-shadow: 0px 6px 15px var(--shadow-img-template);
   border-radius: 5px;
 }
 
-.modal-form {
+.template__modal {
+  background-color: var(--special-elements);
+}
+
+.modal__buy {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__buy:hover {
+  color: var(--button-red);
+}
+
+.modal__buy:focus {
+  color: var(--text-big);
+  opacity: 0.3;
+}
+
+.modal__text {
+  color: var(--text-contacts);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.view__result__list {
+  list-style: none;
+}
+
+/* Контакты на карте и форма отправки письма */
+
+.modal--form {
   background-color: var(--basic-white);
   box-shadow: 0px 20px 40px var(--shadow-modal-form);
 }
@@ -391,7 +516,7 @@ img {
   background-color: var(--basic-white);
 }
 
-.contacts h3 {
+.contacts__title {
   color: var(--text-big);
   font-weight: bold;
   font-size: 18px;
@@ -399,29 +524,49 @@ img {
   text-transform: uppercase;
 }
 
-.contacts-address, .contacts-phone {
+.contacts__address,
+.contacts__phone {
   color: var(--text-contacts);
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
 }
 
-.form-head {
+.form__head {
   color: var(--text-big);
   font-weight: bold;
   font-size: 45px;
   line-height: 53px;
 }
 
-.letter-item label {
+.letter__field label {
   color: var(--text-big);
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
 }
 
-.letter-item input, textarea {
+.letter__field input,
+.letter__field textarea {
   border: 2px solid var(--form-border);
+  color: var(--text-prompt);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.letter__field input:hover,
+.letter__field textarea:hover {
+  border: 2px solid var(--input-hover);
+  color: var(--text-prompt);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.letter__field input:focus,
+.letter__field textarea:focus {
+  border: 2px solid var(--text-big);
+  color: var(--text-prompt);
+  opacity: 1;
 }
 
 .input::-webkit-input-placeholder {
@@ -435,23 +580,18 @@ img {
 
 /* main-footer */
 
-.social-list {
+.social__list {
   list-style: none;
 }
 
-.social-button {
-  background: linear-gradient(0deg, var(--icons-social), var(--icons-social)), var(--basic-white);
-  border-radius: 50%;
-}
-
-.text-invitation {
+.footer__invitation {
   color: var(--text-big);
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
 }
 
-.text-motivation {
+.footer__motivation {
   color: var(--text-prompt);
   font-weight: normal;
   font-size: 16px;
