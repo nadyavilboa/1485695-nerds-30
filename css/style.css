@@ -67,13 +67,25 @@
 
 /* Global */
 
-page__body {
+.page {
+  height: 100%;
+}
+
+.page__body {
   min-width: 960px;
   margin: 0px;
   padding: 0px;
   font-style: normal;
   font-family: "Roboto", "Courier New", "Arial", sans-serif;
   background-color: var(--basic-white);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows:
+    min-content
+    1fr
+    min-content;
+  margin: 0px 140px;
+  border: 3px solid lime;
 }
 
 a {
@@ -91,8 +103,14 @@ img {
 
 /* Header */
 
+.main__header__bar {
+  background-color: var(--special-elements);
+}
+
 .main__header {
   background-color: var(--special-elements);
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
 }
 
 .site__navigation {
@@ -505,7 +523,7 @@ img {
   list-style: none;
 }
 
-/* Контакты на карте и форма отправки письма */
+/* карта, контакты на карте и форма отправки письма */
 
 .modal--form {
   background-color: var(--basic-white);
