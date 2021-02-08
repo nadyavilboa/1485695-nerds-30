@@ -110,7 +110,7 @@ img {
 }
 
 .main__header__logo {
-  border: 3px solid lime;
+  border: 3px solid lime; /*вот такие обводки*/
   width: 160px;
 }
 
