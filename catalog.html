@@ -12,18 +12,28 @@
     </head>
     <body class="page__body">
         <header class="main__header">
-          <a class="main__header__logo" href="index.html">
-            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"/>
-          </a>
-          <nav class="main__navigation">
-              <ul class="site__navigation">
-                  <li><a href="blank.html">Студия</a></li>
-                  <li><a href="blank.html">Клиенты</a></li>
-                  <li><a href="catalog.html">Магазин</a></li>
-                  <li><a href="blank.html">Контакты</a></li>
+          <div class="header__wrapper">
+            <a class="main__header__logo" href="index.html">
+              <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс"/>
+            </a>
+            <nav class="main__navigation">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="blank.html">Студия</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="blank.html">Клиенты</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="catalog.html">Магазин</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="blank.html">Контакты</a>
+                </li>
               </ul>
-          </nav>
-          <a class="basket" href="blank.html">Корзина</a>
+            </nav>
+            <a class="basket" href="blank.html">Корзина</a>
+          </div>
         </header>
         <main class="center">
             <h1 class="page__title">Магазин готовых шаблонов</h1>
@@ -173,16 +183,16 @@
             <section class="view__result">
                 <h2 class="view__result__title hidden">Кнопки перехода</h2>
                 <ul class="view__result__list">
-                    <li>
+                    <li class="view__result__item">
                         <a class="button--result--current" href="#">1</a>
                     </li>
-                    <li>
+                    <li class="view__result__item">
                         <a class="button--result" href="#">2</a>
                     </li>
-                    <li>
+                    <li class="view_result__item">
                         <a class="button--result" href="#">3</a>
                     </li>
-                    <li>
+                    <li class="view_result__item">
                         <a class="button--result" href="#">Следующая</a>
                     </li>
                 </ul>
@@ -192,38 +202,40 @@
           <h2 class="map__title hidden">Карта</h2>
           <img src="img/map1.png" widht="1440" height="416" alt="Офис компании на карте"/>
         </section>
-        <section class="contacts">
-          <h3 class="contacts__title">Nёrds Design Studio</h3>
-          <p class="contacts__address">191186, Санкт-Петербург<br/>
-          ул. Б. Конюшенная, д. 19/8</p>
-          <p>
-            <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          </p>
-          <a class="button button--red" href="blank.html">Напишите нам</a>
-        </section>
-        <section class="modal--form">
-          <h2 class="form__title hidden">Форма для связи</h2>
-            <p class="form__head">Напишите нам</p>
-            <button class="button--close">
-              <!--Здесь будет кнопка закрыть!-->
-            </button>
-            <form class="form__letter" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
-              <p class="letter__field">
-                <label for="your-name">Ваше имя:</label>
-                <input id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
-              </p>
-              <p class="letter__field">
-                <label for="your-address">Ваш email:</label>
-                <input id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
-              </p>
-              <p class="letter__field">
-                <label for="letter">Текст письма:</label>
-                <textarea form="your-letter" name="letter" placeholder="В свободной форме"></textarea>
-              </p>
-              <button class="button button--red" type="submit">Отправить</button>
-            </form>
-          </fieldset>
-        </section>
+        <div class="our__location">
+          <section class="contacts">
+            <h3 class="contacts__title">Nёrds Design Studio</h3>
+            <p class="contacts__address">191186, Санкт-Петербург<br/>
+            ул. Б. Конюшенная, д. 19/8</p>
+            <p>
+              <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+            </p>
+            <a class="button button--red" href="blank.html">Напишите нам</a>
+          </section>
+          <section class="modal--form">
+            <h2 class="form__title hidden">Форма для связи</h2>
+              <p class="form__head">Напишите нам</p>
+              <button class="button--close">
+                <!--Здесь будет кнопка закрыть!-->
+              </button>
+              <form class="form__letter" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
+                <p class="letter__field">
+                  <label for="your-name">Ваше имя:</label>
+                  <input id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
+                </p>
+                <p class="letter__field">
+                  <label for="your-address">Ваш email:</label>
+                  <input id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
+                </p>
+                <p class="letter__field">
+                  <label for="letter">Текст письма:</label>
+                  <textarea form="your-letter" name="letter" placeholder="В свободной форме"></textarea>
+                </p>
+                <button class="button button--red" type="submit">Отправить</button>
+              </form>
+            </fieldset>
+          </section>
+        </div>
       </main>
       <footer class="main__footer">
         <ul class="social__list">
