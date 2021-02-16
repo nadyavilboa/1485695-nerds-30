@@ -518,6 +518,8 @@ img {
   margin-bottom: 23px;
 }
 
+/*этот список нужно ещё выравнивать*/
+
 .advantages__list {
   list-style-image: url("../img/list.svg");
   margin: 0;
