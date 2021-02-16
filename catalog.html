@@ -37,6 +37,7 @@
           <h1 class="page__title">Магазин готовых шаблонов</h1>
         </header>
         <main class="center">
+          <div class="main__wrapper">
             <section class="filter">
                 <h2 class="filter__title hidden">Фильтр товаров</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
@@ -52,7 +53,7 @@
                     </fieldset>
                     <fieldset>
                         <legend>Сетка:</legend>
-                        <ul>
+                        <ul class="filter__list__parameters">
                             <li>
                                 <input type="radio" name="grid-group" value="adaptive" id="filter-adaptive" checked/>
                                 <label for="filter-adaptive">Адаптивная</label>
@@ -69,7 +70,7 @@
                     </fieldset>
                     <fieldset>
                         <legend>Особенности:</legend>
-                        <ul>
+                        <ul class="filter__list__parameters">
                             <li>
                                 <input type="checkbox" name="slider" id="filter-slider" checked/>
                                 <label for="filter-slider">Слайдер</label>
@@ -95,7 +96,8 @@
                     <button class="button--filter" type="submit">Показать</button>
                 </form>
             </section>
-            <section class="sort__selection">
+            <div class="sort__column">
+              <section class="sort__selection">
                 <h2 class="sort__selection__title">Сортировать:</h2>
                 <ul>
                     <li>
@@ -108,79 +110,79 @@
                       <button class="button--sort">По названию</button>
                     </li>
                 </ul>
-            </section>
-            <section class="filter__result">
+              </section>
+              <section class="filter__result">
                 <h2 class="filter__result__title hidden">Результат фильтрации</h2>
                 <ul class="list__template">
-                    <li>
-                        <a class="template__img" href="#">
-                            <img src="img/img-sedona1.jpg" width="359" height="578" alt="Sedona"/>
-                        </a>
-                        <section class="template__modal">
-                          <h3 class="modal__title hidden">Купить Sedona</h3>
-                          <a class="modal__buy" href="#">Sedona</a>
-                          <p class="modal__text">Информационный сайт<br/>для туристов</p>
-                          <a class="button button--template" href="#">9 900 &#8381</a>
-                        </section>
-                    </li>
-                    <li>
-                        <a class="template__img" href="#">
-                            <img src="img/img-pink1.jpg" width="358" height="578" alt="Pink"/>
-                        </a>
-                        <section class="template__modal">
-                          <h3 class="modal__title hidden">Купить Pink</h3>
-                          <a class="modal__buy" href="#">Pink app</a>
-                          <p class="modal__text">Продуктовый лендинг<br/>приложения для iOS и Android</p>
-                          <a class="button button--template" href="#">9 900 &#8381</a>
-                        </section>
-                    </li>
-                    <li>
-                        <a class="template__img" href="#">
-                            <img src="img/img-barbershop1.jpg" width="358" height="578" alt="Borodinsky"/>
-                        </a>
-                        <section class="template__modal">
-                          <h3 class="modal__title hidden">Купить Barbershop</h3>
-                          <a class="modal__buy" href="#">Barbershop</a>
-                          <p class="modal__text">Сайт салона красоты.<br/>Для мужчин, да.</p>
-                          <a class="button button--template" href="#">9 900 &#8381</a>
-                        </section>
-                      </li>
-                    <li>
-                        <a class="img__template" href="#">
-                            <img src="img/img-mishka1.jpg" width="358" height="578" alt="Mishka"/>
-                        </a>
-                        <section class="template__modal">
-                          <h3 class="modal__title hidden">Купить Mishka</h3>
-                          <a class="modal__buy" href="#">Mishka</a>
-                          <p class="modal__text">Интернет-магазин<br/>вязанных игрушек.</p>
-                          <a class="button button--template" href="#">9 900 &#8381</a>
-                        </section>
-                    </li>
-                    <li>
-                        <a class="template__img" href="#">
-                            <img src="img/img-aplus1.jpg" width="359" height="578" alt="Aplus"/>
-                        </a>
-                        <section class="template__modal">
-                          <h3 class="modal__title hidden">Купить A Plus</h3>
-                          <a class="modal__buy" href="#">A Plus</a>
-                          <p class="modal__text">Лендинг курсов повышения<br/>квалификации</p>
-                          <a class="button button--number" href="#">9 900 &#8381</a>
-                        </section>
-                    </li>
-                    <li>
-                        <a class="template__img" href="#">
-                            <img src="img/img-kvast1.jpg" width="359" height="578" alt="Кваст"/>
-                        </a>
-                        <section class="template__modal">
-                          <h3 class="modal__title hidden">Купить Кваст</h3>
-                          <a class="modal__buy" href="#">Кваст</a>
-                          <p class="modal__text">Промо-сайт производителя<br/>крафтового кваса</p>
-                          <a class="button button--template" href="#">9 900 &#8381</a>
-                        </section>
-                    </li>
+                  <li class="template__left">
+                    <a class="template__img" href="#">
+                      <img src="img/img-sedona1.jpg" width="359" height="578" alt="Sedona"/>
+                    </a>
+                    <section class="template__modal none">
+                      <h3 class="modal__title hidden">Купить Sedona</h3>
+                      <a class="modal__buy" href="#">Sedona</a>
+                      <p class="modal__text">Информационный сайт<br/>для туристов</p>
+                      <a class="button button--template" href="#">9 900 &#8381</a>
+                    </section>
+                  </li>
+                  <li class="template__right">
+                    <a class="template__img" href="#">
+                      <img src="img/img-pink1.jpg" width="358" height="578" alt="Pink"/>
+                    </a>
+                    <section class="template__modal none">
+                      <h3 class="modal__title hidden">Купить Pink</h3>
+                      <a class="modal__buy" href="#">Pink app</a>
+                      <p class="modal__text">Продуктовый лендинг<br/>приложения для iOS и Android</p>
+                      <a class="button button--template" href="#">9 900 &#8381</a>
+                    </section>
+                  </li>
+                  <li class="template__left">
+                    <a class="template__img" href="#">
+                      <img src="img/img-barbershop1.jpg" width="358" height="578" alt="Borodinsky"/>
+                    </a>
+                    <section class="template__modal none">
+                      <h3 class="modal__title hidden">Купить Barbershop</h3>
+                      <a class="modal__buy" href="#">Barbershop</a>
+                      <p class="modal__text">Сайт салона красоты.<br/>Для мужчин, да.</p>
+                      <a class="button button--template" href="#">9 900 &#8381</a>
+                    </section>
+                  </li>
+                  <li class="template__right">
+                    <a class="img__template" href="#">
+                      <img src="img/img-mishka1.jpg" width="358" height="578" alt="Mishka"/>
+                    </a>
+                    <section class="template__modal none">
+                      <h3 class="modal__title hidden">Купить Mishka</h3>
+                      <a class="modal__buy" href="#">Mishka</a>
+                      <p class="modal__text">Интернет-магазин<br/>вязанных игрушек.</p>
+                      <a class="button button--template" href="#">9 900 &#8381</a>
+                      </section>
+                  </li>
+                  <li class="template__left template--last">
+                    <a class="template__img" href="#">
+                      <img src="img/img-aplus1.jpg" width="359" height="578" alt="Aplus"/>
+                    </a>
+                    <section class="template__modal none">
+                      <h3 class="modal__title hidden">Купить A Plus</h3>
+                      <a class="modal__buy" href="#">A Plus</a>
+                      <p class="modal__text">Лендинг курсов повышения<br/>квалификации</p>
+                      <a class="button button--number" href="#">9 900 &#8381</a>
+                    </section>
+                  </li>
+                  <li class="template__right template--last">
+                    <a class="template__img" href="#">
+                      <img src="img/img-kvast1.jpg" width="359" height="578" alt="Кваст"/>
+                    </a>
+                    <section class="template__modal none">
+                      <h3 class="modal__title hidden">Купить Кваст</h3>
+                      <a class="modal__buy" href="#">Кваст</a>
+                      <p class="modal__text">Промо-сайт производителя<br/>крафтового кваса</p>
+                      <a class="button button--template" href="#">9 900 &#8381</a>
+                    </section>
+                  </li>
                 </ul>
-            </section>
-            <section class="view__result">
+              </section>
+              <section class="view__result">
                 <h2 class="view__result__title hidden">Кнопки перехода</h2>
                 <ul class="view__result__list">
                     <li class="view__result__item">
@@ -189,14 +191,16 @@
                     <li class="view__result__item">
                         <a class="button--result" href="#">2</a>
                     </li>
-                    <li class="view_result__item">
+                    <li class="view__result__item">
                         <a class="button--result" href="#">3</a>
                     </li>
-                    <li class="view_result__item">
+                    <li class="view__result__item">
                         <a class="button--result" href="#">Следующая</a>
                     </li>
                 </ul>
-            </section>
+              </section>
+            </div>
+          </div>
         </main>
         <section class="map">
           <h2 class="map__title hidden">Карта</h2>

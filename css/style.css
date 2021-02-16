@@ -310,11 +310,14 @@ img {
   font-size: 16px;
   line-height: 18px;
   text-align: center;
+  border: 1px solid var(--button-filter);
+  padding: 17px 89px 15px 88px;
 }
 
 .button--filter:hover {
   background-color: var(--button-filter-hover);
   color: var(--text-big);
+  border: 1px solid var(--button-filter);
 }
 
 .button--filter:focus {
@@ -323,6 +326,7 @@ img {
   mix-blend-mode: normal;
   opacity: 0.3;
   box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+  border: 1px solid var(--button-filter);
 }
 
 .button--sort--current {
@@ -332,6 +336,7 @@ img {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  border: 1px solid var(--basic-white);
 }
 
 .button--sort {
@@ -343,16 +348,19 @@ img {
   text-transform: uppercase;
   mix-blend-mode: normal;
   opacity: 0.3;
+  border: 1px solid var(--basic-white);
 }
 
 .button--sort:hover {
   mix-blend-mode: normal;
   opacity: 0.6;
+  border: 1px solid var(--basic-white);
 }
 
 .button--sort:focus {
   opacity: 1;
   box-shadow: inset 0px 3px 0px var(--shadow-button-filter);
+  border: 1px solid var(--basic-white);
 }
 
 .button--result--current {
@@ -365,6 +373,7 @@ img {
   line-height: 18px;
   text-align: center;
   border-radius: 3px;
+  padding: 17px 20px 15px 20px;
 }
 
 .button--result {
@@ -375,6 +384,7 @@ img {
   line-height: 18px;
   text-align: center;
   border-radius: 3px;
+  padding: 17px 20px 15px 20px;
 }
 
 .button--result:hover {
@@ -607,18 +617,31 @@ img {
 .partners__list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0;
   margin-left: 31px;
-  margin-right: 43px;
-  margin-top: 46px;
+  margin-right: 37px;
+  margin-top: 0;
   margin-bottom: 28px;
-  border: 3px solid green;
 }
 
-.partners__item {
-  border: 3px solid red;
+.partners__item:first-child {
+  margin-top: 62px;
+  margin-right: 95px;
+}
+
+.partners__item:nth-child(2) {
+  margin-top: 44px;
+  margin-right: 104px;
+}
+
+.partners__item:nth-child(3) {
+  margin-top: 46px;
+  margin-right: 120px;
+}
+
+.partners__item:nth-child(4) {
+  margin-top: 52px;
 }
 
 .partners__list img {
@@ -630,6 +653,17 @@ img {
 }
 
 /*main-info второй страницы*/
+
+.main__wrapper {
+  width: 1160px;
+  margin: 55px auto 0 auto;
+  display: flex;
+  border: 3px solid navy;
+}
+
+.filter fieldset {
+  border: none;
+}
 
 .filter legend {
   color: var(--text-big);
@@ -648,8 +682,9 @@ img {
   text-transform: uppercase;
 }
 
-.filter ul {
+.filter__list__parameters {
   list-style: none;
+  padding: 0;
 }
 
 .filter input {
@@ -669,6 +704,16 @@ img {
   opacity: 0.3;
 }
 
+.sort__column {
+  margin-left: 140px;
+  border: 3px solid blueviolet;
+}
+
+.sort__selection {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sort__selection__title {
   color: var(--text-big);
   font-weight: bold;
@@ -679,10 +724,34 @@ img {
 
 .sort__selection ul {
   list-style: none;
+  padding: 0;
+  display: flex;
+  border: 3px solid orangered;
 }
 
 .list__template {
   list-style: none;
+  padding: 0;
+  margin-right: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 42px;
+}
+
+.template__left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-bottom: 73px;
+}
+
+.template__right {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-bottom: 73px;
+}
+
+.template--last {
+  margin-bottom: 0;
 }
 
 .list__template li:hover {
@@ -722,6 +791,14 @@ img {
 
 .view__result__list {
   list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 55px;
+  margin-bottom: 60px;
+}
+
+.view__result__item {
+  margin-right: 11px;
 }
 
 /* карта, контакты на карте и форма отправки письма */
