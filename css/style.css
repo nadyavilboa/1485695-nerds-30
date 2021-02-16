@@ -396,7 +396,8 @@ img {
   align-items: center;
   text-align: center;
   width: 81px;
-  height: 81px;
+  height: 79px;
+  margin-right: 9px;
 }
 
 .button--social:hover {
@@ -421,7 +422,7 @@ img {
 
 .products {
   width: 1140px;
-  margin: 0 auto auto 46px;
+  margin: 0 auto auto 54px;
 }
 
 .products__list {
@@ -817,11 +818,11 @@ img {
 .main__footer {
   width: 1160px;
   margin: 0 auto;
-  padding: 95px 0 74px 0;
+  padding: 90px 0 74px 0;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 146px;
+  column-gap: 130px;
 }
 
 .social__list {
@@ -833,7 +834,6 @@ img {
   display: flex;
   padding: 0;
   margin: 0;
-  justify-content: space-between;
 }
 
 .footer__invitation {
