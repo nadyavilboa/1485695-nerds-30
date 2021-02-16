@@ -724,6 +724,7 @@ img {
   text-transform: uppercase;
 }
 
+/*вот этот список кнопок не понимаю как выровнять*/
 .sort__selection ul {
   list-style: none;
   padding: 0;
