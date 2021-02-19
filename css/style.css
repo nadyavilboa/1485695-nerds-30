@@ -810,6 +810,10 @@ img {
 
 /* карта, контакты на карте и форма отправки письма */
 
+.map {
+  margin: 0 auto;
+}
+
 .our__location {
   width: 1160px;
   margin: 0 auto;
