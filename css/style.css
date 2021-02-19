@@ -88,11 +88,11 @@ img {
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1;
+  margin: -1px;
   padding: 0;
   overflow: hidden;
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
 }
 
 /* Header */
@@ -336,7 +336,7 @@ img {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  border: 1px solid var(--basic-white);
+  display: block;
 }
 
 .button--sort {
@@ -348,13 +348,11 @@ img {
   text-transform: uppercase;
   mix-blend-mode: normal;
   opacity: 0.3;
-  border: 1px solid var(--basic-white);
 }
 
 .button--sort:hover {
   mix-blend-mode: normal;
   opacity: 0.6;
-  border: 1px solid var(--basic-white);
 }
 
 .button--sort:focus {
@@ -431,8 +429,8 @@ img {
 }
 
 .products {
-  width: 1140px;
-  margin: 0 auto auto 54px;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .products__list {
@@ -658,9 +656,8 @@ img {
 
 .main__wrapper {
   width: 1160px;
-  margin: 55px auto 0 auto;
+  margin: 0 auto;
   display: flex;
-  border: 3px solid navy;
 }
 
 .filter fieldset {
@@ -708,12 +705,13 @@ img {
 
 .sort__column {
   margin-left: 140px;
-  border: 3px solid blueviolet;
 }
 
 .sort__selection {
   display: flex;
   justify-content: space-between;
+  padding: 0;
+  background-color: brown;
 }
 
 .sort__selection__title {
@@ -722,20 +720,26 @@ img {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+  background-color: yellowgreen;
 }
 
 /*вот этот список кнопок не понимаю как выровнять*/
-.sort__selection ul {
+.sort__selection__list {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
-  border: 3px solid orangered;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+.selection__item {
+  margin-right: 25px;
 }
 
 .list__template {
   list-style: none;
   padding: 0;
-  margin-right: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 42px;
