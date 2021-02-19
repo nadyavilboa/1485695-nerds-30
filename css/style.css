@@ -812,6 +812,8 @@ img {
 
 .map__img {
   margin: 0 auto;
+  width: 1440px;
+  height: 416px;
 }
 
 .our__location {
