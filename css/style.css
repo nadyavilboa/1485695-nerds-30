@@ -831,6 +831,7 @@ img {
 
 .map__img {
   margin: 0 auto;
+  display: block;
 }
 
 .our__location {
