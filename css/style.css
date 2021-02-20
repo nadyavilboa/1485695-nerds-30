@@ -670,19 +670,26 @@ img {
   display: flex;
 }
 
+.filter {
+  margin-top: 55px;
+}
+
 .filter fieldset {
   border: none;
 }
 
-.filter legend {
+/*ползунок выбора цены*/
+
+.price__legend {
   color: var(--text-big);
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+  margin-bottom: 48px;
 }
 
-.filter__price {
+.price__limit {
   background-color: var(--special-elements);
   color: var(--text-small);
   font-weight: normal;
@@ -691,36 +698,96 @@ img {
   text-transform: uppercase;
 }
 
-.filter__list__parameters {
-  list-style: none;
-  padding: 0;
+/*radio выбор сетки*/
+
+.grid__choise {
+  margin-top: 54px;
 }
 
-.filter input {
+.grid__choise__legend {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.grid__choise__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.grid__choise__item {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   opacity: 0.4;
+  padding-bottom: 15px;
 }
 
-.filter input:hover {
+.grid__choise__item:hover {
   opacity: 1;
 }
 
-.filter input:focus {
+.grid__choise__item:focus {
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+/*checkbox выбор особенностей сайта*/
+
+.features__choise {
+  margin-top: 43px;
+  margin-bottom: 48px;
+}
+
+.features__choise__legend {
+  color: var(--text-big);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.features__choise__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features__choise__item {
+  color: var(--text-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.4;
+  margin-bottom: 17px;
+}
+
+.features__choise__item:hover {
+  opacity: 1;
+}
+
+.features__choise__item:focus {
   mix-blend-mode: normal;
   opacity: 0.3;
 }
 
 .sort__column {
+  margin-top: 55px;
   margin-left: 140px;
 }
 
 .sort__selection {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 0;
+  margin-bottom: 48px;
 }
 
 .sort__selection__title {
@@ -729,16 +796,17 @@ img {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0;
 }
 
-/*вот этот список кнопок не понимаю как выровнять*/
 .sort__selection__list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 360px;
+  align-items: flex-end;
 }
 
 .selection__item {
@@ -925,7 +993,7 @@ img {
 .main__footer {
   width: 1160px;
   margin: 0 auto;
-  padding: 90px 0 74px 0;
+  padding: 68px 0 76px 0;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 1fr;
@@ -953,7 +1021,7 @@ img {
   grid-row-start: 1;
   grid-row-end: 2;
   order: 1;
-  margin-top: 6px;
+  margin-top: 7px;
   margin-bottom: 10px;
 }
 

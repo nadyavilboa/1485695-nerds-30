@@ -44,53 +44,53 @@
             <section class="filter">
                 <h2 class="filter__title hidden">Фильтр товаров</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
-                    <fieldset>
-                        <legend>Стоимость:</legend>
+                    <fieldset class="price__choise">
+                        <legend class="price__legend">Стоимость:</legend>
                         <span>от
-                          <span class="filter__price">0</span>
+                          <span class="price__limit">0</span>
                         </span>
                         <input type="range" name="cost" id="cost" step="100" min="0" max="15000"/>
                         <span>до
-                          <span class="filter__price">15 000</span>
+                          <span class="price__limit">15 000</span>
                         </span>
                     </fieldset>
-                    <fieldset>
-                        <legend>Сетка:</legend>
-                        <ul class="filter__list__parameters">
-                            <li>
+                    <fieldset class="grid__choise">
+                        <legend class="grid__choise__legend">Сетка:</legend>
+                        <ul class="grid__choise__list">
+                            <li class="grid__choise__item">
                                 <input type="radio" name="grid-group" value="adaptive" id="filter-adaptive" checked/>
                                 <label for="filter-adaptive">Адаптивная</label>
                             </li>
-                            <li>
+                            <li class="grid__choise__item">
                                 <input type="radio" name="grid-group" value="fixed" id="filter-fixed"/>
                                 <label for="filter-fixed">Фиксированная</label>
                             </li>
-                            <li>
+                            <li class="grid__choise__item">
                                 <input type="radio" name="grid-group" value="rubber" id="filter-rubber"/>
                                 <label for="filter-rubber">Резиновая</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
-                        <legend>Особенности:</legend>
-                        <ul class="filter__list__parameters">
-                            <li>
+                    <fieldset class="features__choise">
+                        <legend class="features__choise__legend">Особенности:</legend>
+                        <ul class="features__choise__list">
+                            <li class="features__choise__item">
                                 <input type="checkbox" name="slider" id="filter-slider" checked/>
                                 <label for="filter-slider">Слайдер</label>
                             </li>
-                            <li>
+                            <li class="features__choise__item">
                                 <input type="checkbox" name="block-advantages" id="filter-block-advantages"/>
                                 <label for="filter-block-advantages">Блок преимуществ</label>
                             </li>
-                            <li>
+                            <li class="features__choise__item">
                                 <input type="checkbox" name="news" id="filter-news" checked/>
                                 <label for="filter-news">Новости</label>
                             </li>
-                            <li>
+                            <li class="features__choise__item">
                                 <input type="checkbox" name="gallery" id="filter-gallery"/>
                                 <label for="filter-gallery">Галерея</label>
                             </li>
-                            <li>
+                            <li class="features__choise__item">
                                 <input type="checkbox" name="basket" id="filter-basket"/>
                                 <label for="filter-basket">Корзина</label>
                             </li>
