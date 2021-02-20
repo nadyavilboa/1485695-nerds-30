@@ -103,6 +103,7 @@ img {
 
 .header--catalog {
   padding-bottom: 108px;
+  margin-bottom: 55px;
 }
 
 .header__wrapper {
@@ -821,8 +822,8 @@ img {
 
 /* карта, контакты на карте и форма отправки письма */
 
-.map__img img {
-  margin: 0 auto;
+.map__img {
+  padding: 0 auto;
 }
 
 .our__location {
