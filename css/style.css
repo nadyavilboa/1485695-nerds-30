@@ -385,6 +385,10 @@ img {
   padding: 17px 20px 15px 20px;
 }
 
+.button--result--long {
+  padding: 17px 77px 15px 78px;
+}
+
 .button--result:hover {
   background-color: var(--button-filter-hover);
 }
@@ -711,7 +715,6 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 0;
-  background-color: brown;
 }
 
 .sort__selection__title {
@@ -720,7 +723,6 @@ img {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  background-color: yellowgreen;
 }
 
 /*вот этот список кнопок не понимаю как выровнять*/
@@ -729,12 +731,16 @@ img {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: blueviolet;
 }
 
 .selection__item {
   margin-right: 25px;
+}
+
+.selection__item:last-child {
+  margin-right: 0;
 }
 
 .list__template {
@@ -810,10 +816,8 @@ img {
 
 /* карта, контакты на карте и форма отправки письма */
 
-.map__img {
+.map__img img {
   margin: 0 auto;
-  width: 1440px;
-  height: 416px;
 }
 
 .our__location {
