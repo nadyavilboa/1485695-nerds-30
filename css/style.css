@@ -822,6 +822,12 @@ img {
 
 /* карта, контакты на карте и форма отправки письма */
 
+.map {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 .map__img {
   margin: 0 auto;
 }
