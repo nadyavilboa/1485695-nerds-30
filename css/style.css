@@ -823,7 +823,7 @@ img {
 /* карта, контакты на карте и форма отправки письма */
 
 .map__img {
-  padding: 0 auto;
+  margin: 0 auto;
 }
 
 .our__location {
