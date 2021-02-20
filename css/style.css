@@ -822,16 +822,15 @@ img {
 
 /* карта, контакты на карте и форма отправки письма */
 
-.map {
+.map__img {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: blueviolet;
 }
 
-.map__img {
-  margin: 0 auto;
+.map__img img {
   display: block;
+  margin: 0 auto;
 }
 
 .our__location {
