@@ -122,8 +122,8 @@ img {
 .main__navigation {
   display: flex;
   align-items: center;
-  margin-left: -85px;
-  margin-top: 10px;
+  margin-left: -75px;
+  margin-top: 5px;
 }
 
 .nav__item {
