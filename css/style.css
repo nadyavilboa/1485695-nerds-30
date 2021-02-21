@@ -109,7 +109,6 @@ img {
 .header__wrapper {
   width: 1160px;
   margin: 0 auto;
-  padding-top: 51px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -117,13 +116,14 @@ img {
 
 .main__header__logo {
   width: 160px;
+  margin-top: 49px;
 }
 
 .main__navigation {
   display: flex;
   align-items: center;
   margin-left: -85px;
-  margin-top: 10px;
+  margin-top: 75px;
 }
 
 .nav__item {
@@ -155,7 +155,7 @@ img {
   align-items: center;
   padding: 12px 0;
   display: flex;
-  margin-top: 10px;
+  margin-top: 75px;
 }
 
 .basket__link {
