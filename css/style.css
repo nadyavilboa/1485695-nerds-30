@@ -122,8 +122,8 @@ img {
 .main__navigation {
   display: flex;
   align-items: center;
-  margin-left: -40px;
-  margin-top: 5px;
+  margin-left: -38px;
+  margin-top: 3px;
 }
 
 .nav__item {
@@ -155,7 +155,7 @@ img {
   align-items: center;
   padding: 12px 0;
   display: flex;
-  margin-top: 7px;
+  margin-top: 3px;
 }
 
 .basket__link {
