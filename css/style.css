@@ -123,6 +123,7 @@ img {
   display: flex;
   align-items: center;
   margin-left: -55px;
+  margin-top: 5px;
 }
 
 .nav__item {
@@ -154,7 +155,7 @@ img {
   align-items: center;
   padding: 12px 0;
   display: flex;
-  margin-top: -3px;
+  margin-top: 5px;
 }
 
 .basket__link {
