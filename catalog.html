@@ -33,7 +33,6 @@
               </ul>
             </nav>
             <div class="basket">
-              <img class="basket__img" src="img/cart-icon.svg" width="15px" height="15px" alt=""/>
               <a class="basket__link" href="blank.html">Корзина</a>
             </div>
           </div>
@@ -46,13 +45,26 @@
                 <form method="get" action="https://echo.htmlacademy.ru">
                     <fieldset class="price__choise">
                         <legend class="price__legend">Стоимость:</legend>
-                        <span>от
-                          <span class="price__limit">0</span>
-                        </span>
-                        <input type="range" name="cost" id="cost" step="100" min="0" max="15000"/>
-                        <span>до
-                          <span class="price__limit">15 000</span>
-                        </span>
+                        <div class="range__block">
+                          <div class="range">
+                            <div class="range__circle--left">
+                              <div class="range__circle--left__in"></div>
+                            </div>
+                            <div class="range__circle--right">
+                              <div class="range__circle--right__in"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="price__output__limit">
+                          <div class="price__min">
+                            <span class="price__min__text">от</span>
+                            <span class="price__limit">0</span>
+                          </div>
+                          <div class="price__max">
+                            <span class="price__max__text">до</span>
+                            <span class="price__limit">15 000</span>
+                          </div>
+                        </div>
                     </fieldset>
                     <fieldset class="grid__choise">
                         <legend class="grid__choise__legend">Сетка:</legend>
@@ -113,76 +125,82 @@
                       <a class="button--sort">По названию</a>
                     </li>
                     <li class="selection__item">
-                      <a class="button--sort--up"><img src="img/icon-down-dir.svg" width="11px" height="10px" alt=""/></a>
+                      <a class="button--down button--updown--current"></a>
                     </li>
                     <li class="selection__item">
-                      <a class="button--sort"><img src="img/icon-up-dir.svg" width="11px" height="10px" alt=""/></a>
+                      <a class="button--up"></a>
                     </li>
                 </ul>
               </section>
               <section class="filter__result">
                 <h2 class="filter__result__title hidden">Результат фильтрации</h2>
                 <ul class="list__template">
-                  <li class="template__left">
+                  <li class="template__item template__left">
                     <a class="template__img" href="#">
+                      <span class="template__svg"></span>
                       <img src="img/img-sedona1.jpg" width="359" height="578" alt="Sedona"/>
                     </a>
-                    <section class="template__modal none">
+                    <section class="template__modal">
                       <h3 class="modal__title hidden">Купить Sedona</h3>
                       <a class="modal__buy" href="#">Sedona</a>
                       <p class="modal__text">Информационный сайт<br/>для туристов</p>
                       <a class="button button--template" href="#">9 900 &#8381;</a>
                     </section>
                   </li>
-                  <li class="template__right">
+                  <li class="template__item template__right">
                     <a class="template__img" href="#">
+                      <span class="template__svg"></span>
                       <img src="img/img-pink1.jpg" width="358" height="578" alt="Pink"/>
                     </a>
-                    <section class="template__modal none">
+                    <section class="template__modal">
                       <h3 class="modal__title hidden">Купить Pink</h3>
                       <a class="modal__buy" href="#">Pink app</a>
                       <p class="modal__text">Продуктовый лендинг<br/>приложения для iOS и Android</p>
                       <a class="button button--template" href="#">9 900 &#8381;</a>
                     </section>
                   </li>
-                  <li class="template__left">
+                  <li class="template__item template__left">
                     <a class="template__img" href="#">
+                      <span class="template__svg"></span>
                       <img src="img/img-barbershop1.jpg" width="358" height="578" alt="Borodinsky"/>
                     </a>
-                    <section class="template__modal none">
+                    <section class="template__modal">
                       <h3 class="modal__title hidden">Купить Barbershop</h3>
                       <a class="modal__buy" href="#">Barbershop</a>
                       <p class="modal__text">Сайт салона красоты.<br/>Для мужчин, да.</p>
                       <a class="button button--template" href="#">9 900 &#8381;</a>
                     </section>
                   </li>
-                  <li class="template__right">
+                  <li class="template__item template__right">
                     <a class="img__template" href="#">
+                      <span class="template__svg"></span>
                       <img src="img/img-mishka1.jpg" width="358" height="578" alt="Mishka"/>
                     </a>
-                    <section class="template__modal none">
+                    <section class="template__modal">
                       <h3 class="modal__title hidden">Купить Mishka</h3>
                       <a class="modal__buy" href="#">Mishka</a>
                       <p class="modal__text">Интернет-магазин<br/>вязанных игрушек.</p>
                       <a class="button button--template" href="#">9 900 &#8381;</a>
                       </section>
                   </li>
-                  <li class="template__left template--last">
+                  <li class="template__item template__left template--last">
                     <a class="template__img" href="#">
+                      <span class="template__svg"></span>
                       <img src="img/img-aplus1.jpg" width="359" height="578" alt="Aplus"/>
                     </a>
-                    <section class="template__modal none">
+                    <section class="template__modal">
                       <h3 class="modal__title hidden">Купить A Plus</h3>
                       <a class="modal__buy" href="#">A Plus</a>
                       <p class="modal__text">Лендинг курсов повышения<br/>квалификации</p>
-                      <a class="button button--number" href="#">9 900 &#8381;</a>
+                      <a class="button button--template" href="#">9 900 &#8381;</a>
                     </section>
                   </li>
-                  <li class="template__right template--last">
+                  <li class="template__item template__right template--last">
                     <a class="template__img" href="#">
+                      <span class="template__svg"></span>
                       <img src="img/img-kvast1.jpg" width="359" height="578" alt="Кваст"/>
                     </a>
-                    <section class="template__modal none">
+                    <section class="template__modal">
                       <h3 class="modal__title hidden">Купить Кваст</h3>
                       <a class="modal__buy" href="#">Кваст</a>
                       <p class="modal__text">Промо-сайт производителя<br/>крафтового кваса</p>
@@ -216,54 +234,56 @@
               <img src="img/map1.png" width="1440px" height="416px" alt="Офис компании на карте"/>
             </div>
           </section>
-          <div class="our__location none">
+          <div class="our__location">
             <section class="contacts">
               <h3 class="contacts__title">Nёrds Design Studio</h3>
               <p class="contacts__address">191186, Санкт-Петербург<br/>
               ул. Б. Конюшенная, д. 19/8</p>
-              <p>
-                <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+              <p class="contacts__phone">
+                <a class="contacts__phone__link" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
               </p>
               <a class="button button--red" href="blank.html">Напишите нам</a>
             </section>
             <section class="modal--form">
               <h2 class="form__title hidden">Форма для связи</h2>
               <p class="form__head">Напишите нам</p>
-              <button class="button--close">
-                <!--Здесь будет кнопка закрыть!-->
-              </button>
+              <button class="button--close"></button>
               <form class="form__letter" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
-                <p class="letter__field">
-                  <label for="your-name">Ваше имя:</label>
-                  <input id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
-                </p>
-                <p class="letter__field">
-                  <label for="your-address">Ваш email:</label>
-                  <input id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
-                </p>
-                <p class="letter__field">
-                  <label for="letter">Текст письма:</label>
-                  <textarea form="your-letter" id="letter" name="letter" placeholder="В свободной форме"></textarea>
-                </p>
-                <button class="button button--red" type="submit">Отправить</button>
+                <div class="form__wrapper">
+                  <p class="letter__field letter__field__name">
+                    <label for="your-name">Ваше имя:</label>
+                    <input id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
+                  </p>
+                  <p class="letter__field letter__field__email">
+                    <label for="your-address">Ваш email:</label>
+                    <input id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
+                  </p>
+                  <p class="letter__field letter__field__text">
+                    <label for="letter">Текст письма:</label>
+                    <textarea form="your-letter" id="letter" name="letter" placeholder="В свободной форме"></textarea>
+                  </p>
+                </div>
+                <button class="button button--red button--form" type="submit">Отправить</button>
               </form>
             </section>
           </div>
         </main>
         <footer class="main__footer">
-          <ul class="social__list">
-            <li>
-              <a class="button--social" href="#"><img src="img/vk-icon.svg" width="21" height="15" alt="ссылка на vkontakte"/></a>
-            </li>
-            <li>
-              <a class="button--social" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="ссылка на facebook"/></a>
-            </li>
-            <li>
-              <a class="button--social" href="#"><img src="img/Shape.svg" width="21" height="21" alt="ссылка на instagram"/></a>
-            </li>
-          </ul>
-          <p class="footer__invitation">Давайте дружить, это выгодно!</p>
-          <p class="footer__motivation">Скидка 10% для друзей из социальных сетей.</p>
+          <div class="footer__wrapper">
+            <ul class="social__list">
+              <li>
+                <a class="button--social" href="#"><img src="img/vk-icon.svg" width="21" height="15" alt="ссылка на vkontakte"/></a>
+              </li>
+              <li>
+                <a class="button--social" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="ссылка на facebook"/></a>
+              </li>
+              <li>
+                <a class="button--social" href="#"><img src="img/Shape.svg" width="21" height="21" alt="ссылка на instagram"/></a>
+              </li>
+            </ul>
+            <p class="footer__invitation">Давайте дружить, это выгодно!</p>
+            <p class="footer__motivation">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
         </footer>
     </body>
 </html>
