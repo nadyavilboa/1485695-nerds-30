@@ -122,6 +122,7 @@ img {
 
 .main__header__logo {
   width: 160px;
+  object-fit: contain;
 }
 
 .main__header__logo:hover {
@@ -136,7 +137,6 @@ img {
   display: flex;
   align-items: center;
   margin-left: -38px;
-  margin-top: 3px;
 }
 
 .nav__item {
@@ -167,7 +167,6 @@ img {
 .basket {
   align-items: center;
   display: flex;
-  margin-top: 2px;
   margin-right: 0;
   position: relative;
 }
@@ -251,6 +250,10 @@ img {
   grid-row-start: 1;
   margin: -4px 0 0 10px;
   position:relative;
+}
+
+.animation__img {
+  object-fit: contain;
 }
 
 .animation__buttons {
@@ -414,7 +417,8 @@ img {
   border: 1px solid var(--basic-white);
 }
 
-.button--result--current {
+.button--result--current,
+.button--result:active {
   background-color: var(--basic-white);
   color: var(--text-big);
   border: 3px solid var(--border-button-result);
@@ -541,6 +545,7 @@ img {
 
 .product__item__img {
   order: 0;
+  object-fit: contain;
 }
 
 .products__item__text {
@@ -632,6 +637,7 @@ img {
   grid-row-end: 2;
   margin-top: 23px;
   margin-left: 28px;
+  object-fit: contain;
 }
 
 .description__quality {
@@ -740,6 +746,7 @@ img {
 
 .partners__list img {
   opacity: 0.2;
+  object-fit: contain;
 }
 
 .partners__list img:hover {
@@ -1124,6 +1131,10 @@ img {
   opacity: 1;
 }
 
+.template__img img {
+  object-fit: contain;
+}
+
 .modal__buy {
   color: var(--text-big);
   font-weight: bold;
@@ -1177,6 +1188,7 @@ img {
 .map__img img {
   display: block;
   margin: 0 auto;
+  overflow: visible;
 }
 
 .our__location {
