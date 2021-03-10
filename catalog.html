@@ -36,10 +36,9 @@
               <a class="basket__link" href="blank.html">Корзина</a>
             </div>
           </div>
-          <h1 class="page__title">Магазин готовых шаблонов</h1>
+          <h1 class="page__catalog__title">Магазин готовых шаблонов</h1>
         </header>
-        <main class="center">
-          <div class="main__wrapper">
+        <main class="main__catalog__center">
             <section class="filter">
                 <h2 class="filter__title hidden">Фильтр товаров</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
@@ -115,24 +114,20 @@
               <section class="sort__selection">
                 <h2 class="sort__selection__title">Сортировать:</h2>
                 <ul class="sort__selection__list">
-                    <li class="selection__item">
-                      <a class="button--sort--current">По цене</a>
+                    <li class="selection__item price">
+                      <a href="#" class="button--sort--current">По цене</a>
                     </li>
-                    <li class="selection__item">
-                      <a class="button--sort">По типу</a>
+                    <li class="selection__item type">
+                      <a href="#" class="button--sort">По типу</a>
                     </li>
-                    <li class="selection__item">
-                      <a class="button--sort">По названию</a>
+                    <li class="selection__item name">
+                      <a href="#" class="button--sort">По названию</a>
                     </li>
-                    <li class="selection__item">
-                      <a class="button--down button--updown--current">
-                        <p class="button__text hidden">кнопка прокрутки вниз</p>
-                      </a>
+                    <li class="selection__item down">
+                      <a href="#" class="button--down button--updown--current"><span class="hidden">кнопка прокрутки вниз</span></a>
                     </li>
-                    <li class="selection__item">
-                      <a class="button--up">
-                        <p class="button__text hidden">кнопка прокрутки вверх</p>
-                      </a>
+                    <li class="selection__item up">
+                      <a href="#" class="button--up"><span class="hidden">кнопка прокрутки вверх</span></a>
                     </li>
                 </ul>
               </section>
@@ -148,7 +143,7 @@
                       <h3 class="modal__title hidden">Купить Sedona</h3>
                       <a class="modal__buy" href="#">Sedona</a>
                       <p class="modal__text">Информационный сайт<br/>для туристов</p>
-                      <a class="button button--template" href="#">9 900 &#8381;</a>
+                      <a class="button button--template" href="#">9 900 <span class="rub">&#8381;</span></a>
                     </section>
                   </li>
                   <li class="template__item template__right">
@@ -160,7 +155,7 @@
                       <h3 class="modal__title hidden">Купить Pink</h3>
                       <a class="modal__buy" href="#">Pink app</a>
                       <p class="modal__text">Продуктовый лендинг<br/>приложения для iOS и Android</p>
-                      <a class="button button--template" href="#">9 900 &#8381;</a>
+                      <a class="button button--template" href="#">9 900 <span class="rub">&#8381;</span></span></a>
                     </section>
                   </li>
                   <li class="template__item template__left">
@@ -172,7 +167,7 @@
                       <h3 class="modal__title hidden">Купить Barbershop</h3>
                       <a class="modal__buy" href="#">Barbershop</a>
                       <p class="modal__text">Сайт салона красоты.<br/>Для мужчин, да.</p>
-                      <a class="button button--template" href="#">9 900 &#8381;</a>
+                      <a class="button button--template" href="#">9 900 <span class="rub">&#8381;</span></a>
                     </section>
                   </li>
                   <li class="template__item template__right">
@@ -184,7 +179,7 @@
                       <h3 class="modal__title hidden">Купить Mishka</h3>
                       <a class="modal__buy" href="#">Mishka</a>
                       <p class="modal__text">Интернет-магазин<br/>вязанных игрушек.</p>
-                      <a class="button button--template" href="#">9 900 &#8381;</a>
+                      <a class="button button--template" href="#">9 900 <span class="rub">&#8381;</span></a>
                       </section>
                   </li>
                   <li class="template__item template__left template--last">
@@ -196,7 +191,7 @@
                       <h3 class="modal__title hidden">Купить A Plus</h3>
                       <a class="modal__buy" href="#">A Plus</a>
                       <p class="modal__text">Лендинг курсов повышения<br/>квалификации</p>
-                      <a class="button button--template" href="#">9 900 &#8381;</a>
+                      <a class="button button--template" href="#">9 900 <span class="rub">&#8381;</span></a>
                     </section>
                   </li>
                   <li class="template__item template__right template--last">
@@ -208,7 +203,7 @@
                       <h3 class="modal__title hidden">Купить Кваст</h3>
                       <a class="modal__buy" href="#">Кваст</a>
                       <p class="modal__text">Промо-сайт производителя<br/>крафтового кваса</p>
-                      <a class="button button--template" href="#">9 900 &#8381;</a>
+                      <a class="button button--template" href="#">9 900 <span class="rub">&#8381;</span></a>
                     </section>
                   </li>
                 </ul>
@@ -231,47 +226,46 @@
                 </ul>
               </section>
             </div>
-          </div>
-          <section class="map">
-            <h2 class="map__title hidden">Карта</h2>
-            <div class="map__img">
-              <img src="img/map1.png" width="1440px" height="416px" alt="Офис компании на карте"/>
-            </div>
-          </section>
-          <div class="our__location">
-            <section class="contacts">
-              <h3 class="contacts__title">Nёrds Design Studio</h3>
-              <p class="contacts__address">191186, Санкт-Петербург<br/>
-              ул. Б. Конюшенная, д. 19/8</p>
-              <p class="contacts__phone">
-                <a class="contacts__phone__link" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-              </p>
-              <a class="button button--red" href="blank.html">Напишите нам</a>
-            </section>
-            <section class="modal--form">
-              <h2 class="form__title hidden">Форма для связи</h2>
-              <p class="form__head">Напишите нам</p>
-              <button class="button--close"></button>
-              <form class="form__letter" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
-                <div class="form__wrapper">
-                  <p class="letter__field letter__field__name">
-                    <label for="your-name">Ваше имя:</label>
-                    <input id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
-                  </p>
-                  <p class="letter__field letter__field__email">
-                    <label for="your-address">Ваш email:</label>
-                    <input id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
-                  </p>
-                  <p class="letter__field letter__field__text">
-                    <label for="letter">Текст письма:</label>
-                    <textarea form="your-letter" id="letter" name="letter" placeholder="В свободной форме"></textarea>
-                  </p>
-                </div>
-                <button class="button button--red button--form" type="submit">Отправить</button>
-              </form>
-            </section>
-          </div>
         </main>
+        <section class="map">
+          <h2 class="map__title hidden">Карта</h2>
+          <div class="map__img">
+            <img src="img/map1.png" width="100%" min-height="416" alt="Офис компании на карте"/>
+          </div>
+        </section>
+        <div class="our__location">
+          <section class="contacts">
+            <h3 class="contacts__title">Nёrds Design Studio</h3>
+            <p class="contacts__address">191186, Санкт-Петербург<br/>
+            ул. Б. Конюшенная, д. 19/8</p>
+            <p class="contacts__phone">
+              <a class="contacts__phone__link" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+            </p>
+            <a class="button button--red" href="blank.html">Напишите нам</a>
+          </section>
+          <section class="modal--form">
+            <h2 class="form__title hidden">Форма для связи</h2>
+            <p class="form__head">Напишите нам</p>
+            <button class="button--close"></button>
+            <form class="form__letter" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
+              <div class="form__wrapper">
+                <p class="letter__field letter__field__name">
+                  <label class="name__label" for="your-name">Ваше имя:</label>
+                  <input class="name__input" id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
+                </p>
+                <p class="letter__field letter__field__email">
+                  <label class="address__label" for="your-address">Ваш email:</label>
+                  <input class="address__input" id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
+                </p>
+                <p class="letter__field letter__field__text">
+                  <label class="letter__label" for="letter">Текст письма:</label>
+                  <textarea class="letter__text" form="your-letter" id="letter" name="letter" placeholder="В свободной форме"></textarea>
+                </p>
+              </div>
+              <button class="button button--red button--form" type="submit">Отправить</button>
+            </form>
+          </section>
+        </div>
         <footer class="main__footer">
           <div class="footer__wrapper">
             <ul class="social__list">
@@ -289,5 +283,6 @@
             <p class="footer__motivation">Скидка 10% для друзей из социальных сетей.</p>
           </div>
         </footer>
+        <script src="js/popup.js"></script>
     </body>
 </html>
