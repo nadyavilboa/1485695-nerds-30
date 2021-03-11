@@ -1324,7 +1324,6 @@ img {
   width: 960px;
   box-sizing: border-box;
   position: relative;
-  z-index: 20;
 }
 
 .modal--form--show {
@@ -1378,7 +1377,7 @@ img {
   margin-top: 18px;
   margin-bottom: 37px;
 }
-
+2
 .contacts__phone__link {
   color: var(--text-contacts);
   font-weight: normal;
