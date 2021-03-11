@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Html Academy: Нёрдс</title>
     <link rel="icon" href="favicon.ico"/>
-    <link rel="icon" href="img/Vector.svg" type="image/svg+×ml"/>
+    <link rel="icon" href="img/Vector.svg" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="img/152.png"/>
     <link rel="manifest" href="manifest.webmanifest"/>
     <link rel="stylesheet" href="css/normalize.css">
@@ -38,45 +38,45 @@
         <section class="slider">
           <h2 class="slider__title hidden">Слайдер</h2>
           <div class="slider__wrapper">
-            <p class="slider__slogan active one">Долго, дорого,<br/>
+            <p class="slider__slogan slider__slogan--one">Долго, дорого,<br/>
             скрупулезно.</p>
-            <p class="slider__slogan none two">Любим математику<br/>
+            <p class="slider__slogan slider__slogan--two none">Любим математику<br/>
             как никто другой</p>
-            <p class="slider__slogan none three">Только ночь,<br/>
+            <p class="slider__slogan slider__slogan--three none">Только ночь,<br/>
             только хардкор
             </p>
-            <p class="slider__text active one">
+            <p class="slider__text slider__text--one">
               Математически выверенный дизайн<br/>
               для вашего сайта или мобильного приложения.
             </p>
-            <p class="slider__text none two">
+            <p class="slider__text none slider__text--two">
               Никакого креатива, только математические формулы<br/>
               для расчёта идеальных пропорций.
             </p>
-            <p class="slider__text none three">
+            <p class="slider__text none slider__text--three">
               Работать днём, как все? Мы против этого.<br/>
               Ближе к полуночи работа только начинается.
             </p>
             <a class="button button--red button--slider" href="blank.html">Узнать больше</a>
           </div>
           <div class="slider__animation">
-            <img class="animation__img active one" src="img/nerds-index-slide11.png" width="760" height="431" alt="Анимация"/>
-            <img class="animation__img none two" src="img/nerds-index-slide21.png" width="760" height="431" alt="Анимация"/>
-            <img class="animation__img none three" src="img/nerds-index-slide31.png" width="760" height="431" alt="Анимация"/>
+            <img class="animation__img animation__img--active animation__img--one" src="img/nerds-index-slide11.png" width="760" height="431" alt="Анимация"/>
+            <img class="animation__img none animation__img--two" src="img/nerds-index-slide21.png" width="760" height="431" alt="Анимация"/>
+            <img class="animation__img none animation__img--three" src="img/nerds-index-slide31.png" width="760" height="431" alt="Анимация"/>
             <ul class="list__animation__buttons">
               <li class="animation__buttons__item">
-                <button class="button--circle button--circle--current one" disabled>
-                  <span class="button__text hidden">кнопка слайдера с картинками</span>
+                <button class="button--circle button--circle--one button--circle--current" disabled>
+                  <span class="button__text hidden">кнопка слайдера первая</span>
                 </button>
               </li>
               <li class="animation__buttons__item">
-                <button class="button--circle two">
-                  <span class="button__text hidden">кнопка слайдера с картинками</span>
+                <button class="button--circle button--circle--two">
+                  <span class="button__text hidden">кнопка слайдера вторая</span>
                 </button>
               </li>
-              <li class="animation__buttons__item three">
-                <button class="button--circle">
-                  <span class="button__text hidden">кнопка слайдера с картинками</span>
+              <li class="animation__buttons__item">
+                <button class="button--circle button--circle--three">
+                  <span class="button__text hidden">кнопка слайдера третья</span>
                 </button>
               </li>
             </ul>
@@ -157,17 +157,17 @@
       <section class="partners">
         <h2 class="partners__title hidden">Партнёры компании</h2>
         <ul class="partners__list">
-          <li class="partners__item htmlacademy">
-            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_htmlacademy.svg" width="199" height="68"  alt="HTML Academy"/></a>
+          <li class="partners__item partners__item--htmlacademy">
+            <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="partners__item__img" src="img/logo_htmlacademy.svg" width="199" height="68"  alt="HTML Academy"/></a>
           </li>
-          <li class="partners__item borodinsky">
-            <a href="#"><img src="img/logo-borodinsky.svg" width="209" height="90" alt="Borodinsky"/></a>
+          <li class="partners__item partners__item--borodinsky">
+            <a href="#"><img class="partners__item__img" src="img/logo-borodinsky.svg" width="209" height="90" alt="Borodinsky"/></a>
           </li>
-          <li class="partners__item pink">
-            <a href="#"><img src="img/logo-pink.svg" width="185" height="52" alt="Pink"/></a>
+          <li class="partners__item partners__item--pink">
+            <a href="#"><img class="partners__item__img" src="img/logo-pink.svg" width="185" height="52" alt="Pink"/></a>
           </li>
-          <li class="partners__item mishka">
-            <a href="#"><img src="img/logo-mishka.svg" width="173" height="84" alt="Mishka"/></a>
+          <li class="partners__item partners__item--mishka">
+            <a href="#"><img class="partners__item__img" src="img/logo-mishka.svg" width="173" height="84" alt="Mishka"/></a>
           </li>
         </ul>
       </section>
@@ -175,7 +175,7 @@
     <section class="map">
       <h2 class="map__title hidden">Карта</h2>
       <div class="map__img">
-        <img src="img/map1.png" width="100%" min-height="416" alt="Офис компании на карте"/>
+        <img src="img/map1.png" width="1440" height="416" alt="Офис компании на карте"/>
       </div>
     </section>
     <div class="our__location">
@@ -195,16 +195,16 @@
         <form class="form__letter" action="https://echo.htmlacademy.ru" method="post" id="your-letter">
           <div class="form__wrapper">
             <p class="letter__field letter__field__name">
-              <label class="name__label" for="your-name">Ваше имя:</label>
-              <input class="name__input" id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
+              <label class="letter__field__label name__label" for="your-name">Ваше имя:</label>
+              <input class="letter__field__input name__input" id="your-name" type="text" name="name-name" placeholder="Имя Фамилия"/>
             </p>
             <p class="letter__field letter__field__email">
-              <label class="address__label" for="your-address">Ваш email:</label>
-              <input class="address__input" id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
+              <label class="letter__field__label address__label" for="your-address">Ваш email:</label>
+              <input class="letter__field__input address__input" id="your-address" type="email" name="email-address" placeholder="email@example.com"/>
             </p>
             <p class="letter__field letter__field__text">
-              <label class="letter__label" for="letter">Текст письма:</label>
-              <textarea class="letter__text" form="your-letter" id="letter" name="letter" placeholder="В свободной форме"></textarea>
+              <label class="letter__field__label letter__label" for="letter">Текст письма:</label>
+              <textarea class="letter__field__textarea letter__text" form="your-letter" id="letter" name="letter" placeholder="В свободной форме"></textarea>
             </p>
           </div>
           <button class="button button--red button--form" type="submit">Отправить</button>
@@ -231,4 +231,3 @@
     <script src="js/popup.js"></script>
 </body>
 </html>
-

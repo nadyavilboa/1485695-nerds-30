@@ -135,7 +135,7 @@ img {
 .main__navigation {
   display: flex;
   align-items: center;
-  margin-left: -34px;
+  margin-left: -42px;
   margin-top: 12px;
 }
 
@@ -178,7 +178,7 @@ img {
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
-  padding: 12px 0 12px 12px;
+  padding: 12px 0;
   display: block;
 }
 
@@ -203,6 +203,10 @@ img {
   color: var(--text-big);
   mix-blend-mode: normal;
   opacity: 0.3;
+}
+
+.nav__active {
+  border-bottom: 2px solid var(--button-red);
 }
 
 .nav__link:active,
@@ -259,7 +263,7 @@ img {
   margin: 0;
 }
 
-.animation__img.active {
+.animation__img--active {
   object-fit: contain;
   margin: 0;
   display: block;
@@ -799,31 +803,31 @@ img {
   margin-bottom: 40px;
 }
 
-.partners__item.htmlacademy {
+.partners__item--htmlacademy {
   margin-top: 60px;
   margin-right: 95px;
 }
 
-.partners__item.borodinsky {
+.partners__item--borodinsky {
   margin-top: 47px;
   margin-right: 104px;
 }
 
-.partners__item.pink {
+.partners__item--pink {
   margin-top: 46px;
   margin-right: 120px;
 }
 
-.partners__item.mishka {
+.partners__item--mishka {
   margin-top: 52px;
 }
 
-.partners__list img {
+.partners__item__img {
   opacity: 0.2;
   object-fit: contain;
 }
 
-.partners__list img:hover {
+.partners__item__img:hover {
   opacity: 1;
 }
 
@@ -842,7 +846,7 @@ img {
   padding: 0;
 }
 
-.filter fieldset {
+.filter__fieldset {
   border: none;
   padding: 0;
 }
@@ -993,11 +997,11 @@ img {
   margin: 0;
 }
 
-.grid__choise__item input {
+.grid__choise__input {
   display: none;
 }
 
-.grid__choise__item label::before {
+.grid__choise__label::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -1009,20 +1013,23 @@ img {
   vertical-align: text-bottom;
 }
 
-.grid__choise input:checked ~ label::before {
+.grid__choise__input:checked ~ label::before {
   background-image: url("../img/radio-on.svg");
 }
 
-.grid__choise__item input:disabled ~ .grid__choise__item{
+.grid__choise__input:disabled ~ .grid__choise__item{
   opacity: 0.1;
 }
 
-.grid__choise__item {
+.grid__choise__label {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   opacity: 0.4;
+}
+
+.grid__choise__item {
   margin-bottom: 15px;
 }
 
@@ -1062,11 +1069,11 @@ img {
   margin: 0;
 }
 
-.features__choise input {
+.features__choise__input {
   display: none;
 }
 
-.features__choise__item label::before {
+.features__choise__label::before {
   content: "";
   display: inline-block;
   width: 23px;
@@ -1078,11 +1085,11 @@ img {
   vertical-align: text-bottom;
 }
 
-.features__choise__item input:checked ~ label::before {
+.features__choise__input:checked ~ label::before {
   background-image: url("../img/checkbox-on.svg");
 }
 
-.features__choise__item input:disabled {
+.features__choise__input:disabled {
   opacity: 0.1;
 }
 
@@ -1091,7 +1098,7 @@ img {
   opacity: 0.4;
 }
 
-.features__choise__item label {
+.features__choise__label {
   color: var(--text-small);
   font-weight: normal;
   font-size: 16px;
@@ -1137,39 +1144,34 @@ img {
   display: flex;
   justify-content: space-between;
   width: 360px;
-  align-items: flex-end;
+  align-items: center;
 }
 
-.selection__item.price {
+.selection__item--price {
   margin-right: 24px;
   margin-left: 0;
   padding: 0;
 }
 
-.selection__item.type {
+.selection__item--type {
   margin-right: 25px;
   padding: 0;
 }
 
-.selection__item.name {
+.selection__item--name {
   margin-right: 47px;
   padding: 0;
 }
 
-.selection__item.down {
+.selection__item--down {
   margin-right: 18px;
   margin-top: 0;
   padding: 0;
 }
 
-.selection__item.up {
+.selection__item--up {
   margin-right: 0;
-  margin-top: 0;
   padding: 0;
-}
-
-.selection__item:last-child:hover {
-  opacity: 1;
 }
 
 .list__template {
@@ -1229,15 +1231,6 @@ img {
   opacity: 0;
 }
 
-.template__modal .rub {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 112%;
-  height: 1.5ex;
-  text-transform: uppercase;
-  color: var(--basic-white);
-}
-
 .template__item:hover .template__modal {
   opacity: 1;
 }
@@ -1289,19 +1282,17 @@ img {
 /* карта, контакты на карте и форма отправки письма */
 
 .map {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 100%;
-  position: absolute;
   z-index: -10;
+  position: relative;
 }
 
 .map__img {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   position: absolute;
-  z-index: -10;
 }
 
 .map__img img {
@@ -1321,9 +1312,15 @@ img {
   margin: 0 auto;
   padding: 63px 99px 84px 100px;
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-bottom: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
   width: 960px;
   box-sizing: border-box;
-  position: relative;
 }
 
 .modal--form--show {
@@ -1351,7 +1348,7 @@ img {
 
 .contacts {
   background-color: var(--basic-white);
-  padding: 48px 50px 47px 50px;
+  padding: 48px 50px 62px 50px;
   width: 319px;
   box-sizing: border-box;
 }
@@ -1375,9 +1372,9 @@ img {
 
 .contacts__phone {
   margin-top: 18px;
-  margin-bottom: 37px;
+  margin-bottom: 54px;
 }
-2
+
 .contacts__phone__link {
   color: var(--text-contacts);
   font-weight: normal;
@@ -1423,7 +1420,7 @@ img {
   margin-top: 34px;
 }
 
-.letter__field label {
+.letter__field__label {
   color: var(--text-big);
   font-weight: bold;
   font-size: 16px;
@@ -1432,8 +1429,8 @@ img {
   margin-bottom: 9px;
 }
 
-.letter__field input,
-.letter__field textarea {
+.letter__field__input,
+.letter__field__textarea {
   border: 2px solid var(--form-border);
   color: var(--text-prompt);
   mix-blend-mode: normal;
@@ -1442,28 +1439,37 @@ img {
   padding: 16px 14px 16px 16px;
 }
 
-.letter__field input:hover,
-.letter__field textarea:hover {
+.letter__field__input:hover,
+.letter__field__textarea:hover {
   border: 2px solid var(--input-hover);
   color: var(--text-prompt);
   mix-blend-mode: normal;
   opacity: 0.5;
 }
 
-.letter__field input:focus,
-.letter__field textarea:focus {
+.letter__field__input:focus,
+.letter__field__textarea:focus {
   border: 2px solid var(--text-big);
   color: var(--text-prompt);
   opacity: 1;
 }
 
-.letter__field input:invalid {
+.letter__field__input:invalid {
   border: 2px solid var(--button-red-hover);
   color: var(--button-red-hover);
   opacity: 1;
 }
 
-.input::-webkit-input-placeholder {
+.letter__field__input::-webkit-input-placeholder {
+  color: var(--text-prompt);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.letter__field__textarea::-webkit-textarea-placeholder {
   color: var(--text-prompt);
   font-weight: normal;
   font-size: 16px;
