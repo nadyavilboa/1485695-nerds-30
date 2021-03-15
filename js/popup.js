@@ -20,7 +20,7 @@ try {
 btnContacts.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupForm.classList.add("modal--form--show");
-  if (storage) {
+  if (storageName && storageAddress) {
     nameUser.value = storageName;
     addressUser.value = storageAddress;
     textLetter.focus();
@@ -32,11 +32,15 @@ btnContacts.addEventListener("click", function (evt) {
 btnClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupForm.classList.remove("modal--form--show");
+  popupForm.classList.remove("modal--error");
 });
 
 formData.addEventListener("submit", function (evt) {
   if (!nameUser.value || !addressUser.value || !textLetter.value) {
     evt.preventDefault();
+    popupForm.classList.remove("modal--error");
+    popupForm.offsetWidth = popupForm.offsetWidth;
+    popupForm.classList.add("modal--error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", nameUser.value);
@@ -50,6 +54,7 @@ window.addEventListener("keydown", function (evt) {
     if (popupForm.classList.contains("modal--form--show")) {
       evt.preventDefault();
       popupForm.classList.remove("modal--form--show");
+      popupForm.classList.remove("modal--error");
     }
   }
 });
