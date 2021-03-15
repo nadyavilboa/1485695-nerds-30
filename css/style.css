@@ -1411,6 +1411,7 @@ img {
   animation: snake 0.6s;
 }
 
+/* анимация открытия модального окна */
 @keyframes bounce {
   0% {
     transform: translate(-50%,-3300px);
@@ -1432,6 +1433,8 @@ img {
     transform: translate(-50%,-300px);
   }
 }
+
+/*анимация ошибки заполения полей */
 
 @keyframes snake {
   0%,
