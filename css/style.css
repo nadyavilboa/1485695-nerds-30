@@ -1366,12 +1366,14 @@ img {
   padding: 0;
   z-index: -5;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .map__google iframe {
-  margin: 0 auto;
-  padding: 0;
-  display: block;
+  height: 416px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .map__img img {
